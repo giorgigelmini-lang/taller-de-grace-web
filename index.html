@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Taller de Grace — Cerámica en Málaga</title>
+  <meta name="description" content="Taller de cerámica artesanal en Málaga. Clases de modelado y alfarería en torno. Sin experiencia previa. Reserva por WhatsApp." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Cursor custom -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ══ NAVBAR ════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" aria-label="Navegación principal">
+    <div class="nav-inner">
+
+      <!-- Links sinistra -->
+      <ul class="nav-links" role="list">
+        <li><a href="#abril">Calendario</a></li>
+        <li><a href="#talleres">Talleres</a></li>
+      </ul>
+
+      <!-- Logo sticker — centro CSS -->
+      <a href="#inicio" class="logo-center" aria-label="El Taller de Grace — inicio">
+        <img src="./assets/logo.png" alt="El Taller de Grace" class="logo-image-nav" />
+      </a>
+
+      <!-- Links destra + social icons -->
+      <div class="nav-right-group">
+        <ul class="nav-links" role="list">
+          <li><a href="#nosotras">Nosotras</a></li>
+          <li><a href="#reservar">Reservar</a></li>
+        </ul>
+        <div class="nav-socials" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/eltallerdegrace" target="_blank" rel="noopener noreferrer"
+             class="nav-social-link" aria-label="Instagram de El Taller de Grace">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61570209707940&amp;sk" target="_blank" rel="noopener noreferrer"
+             class="nav-social-link" aria-label="Facebook de El Taller de Grace">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hamburger mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú">
+    <button class="mobile-close" id="menuClose" aria-label="Cerrar">✕</button>
+    <a href="#abril" class="mobile-link">Calendario</a>
+    <a href="#talleres" class="mobile-link">Talleres</a>
+    <a href="#nosotras" class="mobile-link">Nosotras</a>
+    <a href="#reservar" class="mobile-link">Reservar</a>
+  </div>
+
+
+  <!-- ══ HERO ═════════════════════════════════════════════ -->
+  <section class="hero" id="inicio" aria-label="Portada">
+
+    <!-- Background + sinuous curves decorative -->
+    <div class="hero-bg" aria-hidden="true">
+      <img
+        src="./assets/hero_taller_grace_esatta.png"
+        alt="Estudio Interior"
+        class="hero-bg-img"
+        id="heroBgImg"
+        decoding="async"
+        fetchpriority="high"
+      />
+
+      <!-- Sinuous curves — brand decoration (dalle foto del negozio) -->
+      <div class="curves-deco" aria-hidden="true">
+        <svg viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-100,280 C180,60 420,520 720,280 S1200,40 1500,380"
+                fill="none" stroke="#E07848" stroke-width="3" opacity="0.15"/>
+          <path d="M-80,480 C200,220 440,620 740,400 S1220,180 1520,520"
+                fill="none" stroke="#C45830" stroke-width="2" opacity="0.10"/>
+          <path d="M80,120 C320,-80 560,420 860,160 S1340,-60 1600,300"
+                fill="none" stroke="#FAF8F3" stroke-width="1.5" opacity="0.08"/>
+          <path d="M-150,600 C100,360 380,700 680,500 S1160,340 1460,620"
+                fill="none" stroke="#5C3020" stroke-width="4" opacity="0.06"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Taller de cerámica artesanal · Málaga, España</span>
+      <h1 class="hero-title">
+        El Taller<br />de Grace
+      </h1>
+      <div class="hero-cta-row">
+        <a href="#abril" class="btn-primary">
+          Ver calendario Abril
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#nosotras" class="btn-ghost">Nuestra historia</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true" style="color: var(--brown-dark);">
+      <div class="hero-scroll-line" style="background: linear-gradient(to bottom, var(--brown-dark), transparent);"></div>
+      <span>scroll</span>
+    </div>
+
+  </section>
+
+
+  <!-- ══ CALENDARIO ABRIL ══════════════════════════════════ -->
+  <section class="calendar-section" id="abril" aria-label="Calendario de talleres de Abril">
+
+    <!-- Sinuous curves decoration -->
+    <div class="curves-deco" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;">
+      <svg viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-100,350 C220,120 500,480 800,300 S1200,80 1500,380"
+              fill="none" stroke="#C45830" stroke-width="2.5" opacity="0.07"/>
+        <path d="M-50,150 C300,-20 580,380 880,180 S1280,-20 1550,260"
+              fill="none" stroke="#5C3020" stroke-width="2" opacity="0.05"/>
+      </svg>
+    </div>
+
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="calendar-header reveal">
+        <span class="section-label">Reserva tu plaza</span>
+        <h2 class="section-title text-center">Abril en el Taller</h2>
+        <p class="section-subtitle text-center">
+          Haz clic en una fecha destacada para ver los detalles y reservar tu plaza.
+        </p>
+      </div>
+
+      <!-- Calendar card -->
+      <div class="cal-wrap reveal delay-1" role="grid" aria-label="Calendario de Abril 2026">
+
+        <!-- Month header -->
+        <div class="cal-month-bar">
+          <span class="cal-month-title">Abril</span>
+          <span class="cal-month-year">2026</span>
+        </div>
+
+        <!-- Grid: DOW + days -->
+        <div class="cal-grid">
+
+          <!-- Day-of-week headers -->
+          <div class="cal-dow" role="columnheader">Lun</div>
+          <div class="cal-dow" role="columnheader">Mar</div>
+          <div class="cal-dow" role="columnheader">Mié</div>
+          <div class="cal-dow" role="columnheader">Jue</div>
+          <div class="cal-dow" role="columnheader">Vie</div>
+          <div class="cal-dow" role="columnheader">Sáb</div>
+          <div class="cal-dow" role="columnheader">Dom</div>
+
+          <!-- Week 1: Apr 1 = Wednesday → 2 empty cells first -->
+          <div class="cal-day empty" aria-hidden="true"></div>
+          <div class="cal-day empty" aria-hidden="true"></div>
+          <div class="cal-day past" aria-label="1 de abril">1</div>
+          <div class="cal-day past" aria-label="2 de abril">2</div>
+          <div class="cal-day past" aria-label="3 de abril">3</div>
+          <!-- Apr 4 — Pinta tu pieza -->
+          <div class="cal-day has-event past" data-day="4" data-type="pieza" style="background-image: url('./assets/bg_pinta_pieza.png');" role="button" tabindex="0">
+            <div class="cal-content-overlay"></div>
+            <span class="day-num">4</span>
+            <span class="event-label">Pinta tu<br>pieza</span>
+          </div>
+          <div class="cal-day past" aria-label="5 de abril">5</div>
+
+          <!-- Week 2 -->
+          <div class="cal-day past" aria-label="6 de abril">6</div>
+          <div class="cal-day past" aria-label="7 de abril">7</div>
+          <div class="cal-day past" aria-label="8 de abril">8</div>
+          <div class="cal-day past" aria-label="9 de abril">9</div>
+          <div class="cal-day past" aria-label="10 de abril">10</div>
+          <!-- Apr 11 — Cerámica y Vino -->
+          <div class="cal-day has-event past urgent-event" data-day="11" data-type="vino" style="background-image: url('./assets/bg_ceramica_vino.png');" role="button" tabindex="0">
+            <div class="cal-content-overlay"></div>
+            <span class="day-num">11</span>
+            <span class="event-label">Cerámica<br>y Vino</span>
+          </div>
+          <!-- Apr 12 — Torno -->
+          <div class="cal-day has-event past urgent-event" data-day="12" data-type="torno" style="background-image: url('./assets/bg_torno.png');" role="button" tabindex="0">
+            <div class="cal-content-overlay"></div>
+            <span class="day-num">12</span>
+            <span class="event-label">Torno</span>
+          </div>
+
+          <!-- Week 3 -->
+          <div class="cal-day past" aria-label="13 de abril">13</div>
+          <div class="cal-day past" aria-label="14 de abril">14</div>
+          <div class="cal-day past" aria-label="15 de abril">15</div>
+          <div class="cal-day past" aria-label="16 de abril">16</div>
+          <div class="cal-day past" aria-label="17 de abril">17</div>
+          <!-- Apr 18 — Pinta tu taza -->
+          <div class="cal-day has-event past" data-day="18" data-type="taza" style="background-image: url('./assets/bg_pinta_taza.png');" role="button" tabindex="0">
+            <div class="cal-content-overlay"></div>
+            <span class="day-num">18</span>
+            <span class="event-label">Pinta tu<br>taza</span>
+          </div>
+          <div class="cal-day today" aria-label="19 de abril">19</div>
+
+          <!-- Week 4 -->
+          <div class="cal-day" aria-label="20 de abril">20</div>
+          <div class="cal-day" aria-label="21 de abril">21</div>
+          <div class="cal-day" aria-label="22 de abril">22</div>
+          <div class="cal-day" aria-label="23 de abril">23</div>
+          <div class="cal-day" aria-label="24 de abril">24</div>
+          <!-- Apr 25 — Cerámica y Vino -->
+          <div class="cal-day has-event" data-day="25" data-type="vino" style="background-image: url('./assets/bg_ceramica_vino.png');" role="button" tabindex="0">
+            <div class="cal-content-overlay"></div>
+            <span class="day-num">25</span>
+            <span class="event-label">Cerámica<br>y Vino</span>
+          </div>
+          <div class="cal-day" aria-label="26 de abril">26</div>
+
+          <!-- Week 5 -->
+          <div class="cal-day" aria-label="27 de abril">27</div>
+          <div class="cal-day" aria-label="28 de abril">28</div>
+          <div class="cal-day" aria-label="29 de abril">29</div>
+          <div class="cal-day" aria-label="30 de abril">30</div>
+          <div class="cal-day empty" aria-hidden="true"></div>
+          <div class="cal-day empty" aria-hidden="true"></div>
+          <div class="cal-day empty" aria-hidden="true"></div>
+
+        </div><!-- /cal-grid -->
+
+        <!-- Legend -->
+        <div class="cal-legend">
+          <div class="cal-legend-item">
+            <div class="cal-dot available"></div>
+            <span>Taller disponible</span>
+          </div>
+          <div class="cal-legend-item">
+            <div class="cal-dot urgent"></div>
+            <span>Últimas plazas</span>
+          </div>
+          <div class="cal-legend-item">
+            <div class="cal-dot empty-day"></div>
+            <span>Sin taller</span>
+          </div>
+        </div>
+
+      </div><!-- /cal-wrap -->
+    </div>
+  </section>
+
+
+  <!-- ══ MODAL CORSO ═══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-card" id="modalCard">
+
+      <!-- Main info panel -->
+      <div class="modal-panel" id="modalPanel">
+        <div class="modal-header-band">
+          <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+          <span class="modal-date-tag" id="modalDateTag"></span>
+          <div class="modal-emoji-svg" id="modalEmoji" aria-hidden="true"></div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-features-grid">
+            <div class="feature-item" id="modFeat1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="modal-svg-icon"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+              <p>Materiales y horneado incluido</p>
+            </div>
+            <div class="feature-item" id="modFeat2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="modal-svg-icon"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg>
+              <p>Bebida incluida</p>
+            </div>
+            <div class="feature-item" id="modFeat3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="modal-svg-icon"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/><path d="M6 11V9a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/></svg>
+              <p>Sin experiencia previa</p>
+            </div>
+          </div>
+          <p class="modal-desc" id="modalDesc"></p>
+
+          <div class="modal-specs">
+            <div class="modal-spec">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="modal-spec-svg"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+              <span class="modal-spec-label">Precio</span>
+              <span class="modal-spec-value" id="modalPrice"></span>
+            </div>
+            <div class="modal-spec">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="modal-spec-svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="modal-spec-label">Horario</span>
+              <span class="modal-spec-value" id="modalTime"></span>
+            </div>
+            <div class="modal-spec">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="modal-spec-svg"><path d="M12 2v20"/><path d="M5 4h14"/><path d="M5 20h14"/><path d="m19 6-3 4-4-4"/><path d="m5 18 3-4 4 4"/></svg>
+              <span class="modal-spec-label">Duración</span>
+              <span class="modal-spec-value" id="modalDuration"></span>
+            </div>
+          </div>
+
+          <div class="spots-row">
+            <span class="spots-label">Plazas:</span>
+            <div class="spots-bar" aria-hidden="true">
+              <div class="spots-fill" id="spotsFill" style="width:0%"></div>
+            </div>
+            <span class="spots-count" id="spotsCount"></span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-book" id="btnBook" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+            </svg>
+            Quiero esta plaza
+          </button>
+          <a href="#" class="btn-book-alt" id="btnBookWa" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            O reservar directamente por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Confirmation panel (shown after clicking "Quiero esta plaza") -->
+      <div class="modal-confirm" id="modalConfirm" aria-live="polite">
+        <div class="confirm-circle" aria-hidden="true">✓</div>
+        <h3 class="confirm-title">¡Plaza reservada!</h3>
+        <p class="confirm-sub" id="confirmSub"></p>
+        <a href="#" class="btn-wa-confirm" id="confirmWaLink" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Confirmar por WhatsApp
+        </a>
+        <a href="#" class="confirm-back" id="confirmBack">← Volver al calendario</a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══ WORKSHOPS ══════════════════════════════════════════ -->
+  <section class="workshops" id="talleres" aria-label="Nuestros talleres">
+
+    <!-- Sinuous curves decoration -->
+    <div class="curves-deco" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;">
+      <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1500,200 C1200,60 900,440 600,260 S200,80 -100,360"
+              fill="none" stroke="#5C3020" stroke-width="3" opacity="0.06"/>
+        <path d="M1500,430 C1180,220 880,560 580,380 S160,200 -100,460"
+              fill="none" stroke="#C45830" stroke-width="2" opacity="0.05"/>
+      </svg>
+    </div>
+
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="workshops-header reveal">
+        <span class="section-label">Lo que hacemos</span>
+        <h2 class="section-title text-center">Dos maneras de ensuciarse</h2>
+        <p class="section-subtitle text-center">
+          Sin fichas de inscripción, sin uniformes. Solo un par de horas fuera del mundo
+          y las manos dentro del barro.
+        </p>
+      </div>
+
+      <div class="ws-grid">
+
+        <!-- Card: Pinta tu pieza -->
+        <article class="ws-card interactive-card reveal" aria-label="Taller Pinta tu pieza">
+          <div class="ws-band" style="background-image: url('./assets/bg_pinta_pieza.png');" aria-hidden="true">
+            <span class="ws-badge">NUEVA FECHA</span>
+          </div>
+          <div class="ws-body">
+            <h3>Pinta tu pieza</h3>
+            <p>
+              Elige una pieza de nuestro catálogo y píntala a tu manera. 
+              Nosotros la horneamos y te la entregamos lista para usar.
+            </p>
+            <div class="ws-meta">
+              <div class="ws-meta-item"><span aria-hidden="true">⏱</span><span>2 horas</span></div>
+              <div class="ws-meta-item"><span aria-hidden="true">👥</span><span>Grupos reducidos</span></div>
+              <div class="ws-meta-item"><span aria-hidden="true">🌿</span><span>Todos los niveles</span></div>
+            </div>
+            <a href="https://wa.me/34613321899?text=Hola%20Grace%2C%20quiero%20reservar%20una%20plaza%20para%20Pinta%20tu%20pieza%20%F0%9F%8E%A8"
+               target="_blank" rel="noopener noreferrer" class="btn-wa-ws">
+               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+               Reservar plaza
+            </a>
+          </div>
+        </article>
+
+        <!-- Card: Cerámica y Vino -->
+        <article class="ws-card interactive-card reveal delay-1" aria-label="Taller Cerámica y Vino">
+          <div class="ws-band vino" style="background-image: url('./assets/bg_ceramica_vino.png');" aria-hidden="true">
+            <span class="ws-badge">El favorito</span>
+          </div>
+          <div class="ws-body">
+            <h3>Cerámica y Vino</h3>
+            <p>
+              Una noche donde nadie te pide nada perfecto. Modelas, te ríes,
+              compartes una copa de vino malagueño y te llevas a casa algo que hiciste
+              tú, con tus propias manos.
+            </p>
+            <div class="ws-meta">
+              <div class="ws-meta-item"><span aria-hidden="true">⏱</span><span>2,5 horas</span></div>
+              <div class="ws-meta-item"><span aria-hidden="true">👥</span><span>Máx. 10 personas</span></div>
+              <div class="ws-meta-item"><span aria-hidden="true">🌿</span><span>Sin experiencia</span></div>
+            </div>
+            <div class="ws-price">45€ <sub>/ persona</sub></div>
+            <div class="ws-price-note">Materiales + vino picoteo incluidos</div>
+            <a href="https://wa.me/34613321899?text=Hola%20Grace%2C%20quiero%20reservar%20una%20plaza%20para%20el%20taller%20de%20Cer%C3%A1mica%20y%20Vino%20%F0%9F%8D%B7%20%C2%BFCu%C3%A1ndo%20hay%20disponibilidad%3F"
+               target="_blank" rel="noopener noreferrer" class="btn-wa-ws">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Reservar plaza
+            </a>
+          </div>
+        </article>
+
+        <!-- Card: Pinta tu taza -->
+        <article class="ws-card interactive-card reveal delay-2" aria-label="Taller Pinta tu taza">
+          <div class="ws-band" style="background-image: url('./assets/bg_pinta_taza.png');" aria-hidden="true">
+          </div>
+          <div class="ws-body">
+            <h3>Pinta tu taza</h3>
+            <p>
+              ¡Vuelve el clásico! Diseña y pinta tu propia taza. 
+              No necesitas tener experiencia, los materiales y el horneado están incluidos.
+            </p>
+            <div class="ws-meta">
+              <div class="ws-meta-item"><span aria-hidden="true">⏱</span><span>2 horas</span></div>
+              <div class="ws-meta-item"><span aria-hidden="true">👥</span><span>Plazas limitadas</span></div>
+              <div class="ws-meta-item"><span aria-hidden="true">🌿</span><span>Todos los niveles</span></div>
+            </div>
+            <div class="ws-price">28€ <sub>/ persona</sub></div>
+            <div class="ws-price-note">Materiales y horneado incluidos</div>
+            <a href="https://wa.me/34613321899?text=Hola%20Grace%2C%20quiero%20reservar%20una%20plaza%20para%20Pinta%20tu%20taza%20%E2%98%95"
+               target="_blank" rel="noopener noreferrer" class="btn-wa-ws">
+               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+               Reservar plaza
+            </a>
+          </div>
+        </article>
+
+        <!-- Card: Torno -->
+        <article class="ws-card interactive-card reveal delay-3" aria-label="Taller Torno de Alfarería">
+          <div class="ws-band torno" style="background-image: url('./assets/bg_torno.png');" aria-hidden="true">
+          </div>
+          <div class="ws-body">
+            <h3>Torno de Alfarería</h3>
+            <p>
+              El torno no perdona las prisas. Exige que estés presente, que respires,
+              que escuches el barro. Es la experiencia más difícil y la más adictiva.
+            </p>
+            <div class="ws-meta">
+              <div class="ws-meta-item"><span aria-hidden="true">⏱</span><span>3 horas</span></div>
+              <div class="ws-meta-item"><span aria-hidden="true">👥</span><span>Máx. 6 personas</span></div>
+              <div class="ws-meta-item"><span aria-hidden="true">🌿</span><span>Principiantes ok</span></div>
+            </div>
+            <div class="ws-price">65€ <sub>/ persona</sub></div>
+            <div class="ws-price-note">Materiales incluidos · Grupo muy reducido</div>
+            <a href="https://wa.me/34613321899?text=Hola%20Grace%2C%20quiero%20reservar%20una%20plaza%20para%20el%20taller%20de%20Torno%20%F0%9F%8F%BA%20%C2%BFCu%C3%A1ndo%20hay%20disponibilidad%3F"
+               target="_blank" rel="noopener noreferrer" class="btn-wa-ws">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Reservar plaza
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ STORYTELLING — Manos & Barro ══════════════════════ -->
+  <section class="story" id="nosotras" aria-label="La historia de Grace">
+    <div class="container">
+      <div class="story-inner">
+
+
+
+        <!-- Text -->
+        <div class="story-text reveal delay-2">
+          <span class="section-label">Manos &amp; Barro</span>
+          <h2 class="section-title">La historia de Grace</h2>
+
+          <blockquote>
+            Desconecta de la rutina. Relájate. Siente el barro en tus manos.
+          </blockquote>
+
+          <p><span class="drop-cap">E</span>n el corazón de nuestro taller en Málaga, la mayor pasión que tenemos es compartir
+             la magia de la cerámica de la forma más cercana y humana posible.
+             Hemos creado este refugio para que <strong>eches el freno al día a día</strong> 
+             y te regales un momento para ti.</p>
+
+          <p>No importa si nunca has tocado la arcilla. De hecho, nos encanta ser parte de esa primera vez.
+             No buscamos la taza simétrica y perfecta; queremos que disfrutes del proceso táctil, de la 
+             humedad fría del barro y de la satisfacción sensorial de crear algo completamente desde cero.</p>
+
+          <p>El barro tiene su propio tiempo y te enseña a estar presente. 
+             <strong>Ven sin prisas, mánchate las manos y déjate llevar por tu intuición.</strong></p>
+
+          <div class="story-sig">
+            <div class="story-sig-line" aria-hidden="true"></div>
+            <span>Grace · ceramista y fundadora</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ RESEÑAS ══════════════════════════════════════════ -->
+  <section class="reviews" id="resenas" aria-label="Reseñas de alumnas">
+    <div class="container">
+
+      <div class="reviews-header reveal" style="text-align:center;">
+        <span class="section-label">Lo que dicen</span>
+        <h2 class="section-title text-center">Ellas ya lo vivieron</h2>
+        <p class="section-subtitle text-center">
+          Reseñas reales de alumnas del taller.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+
+        <!-- Reseña 1 — Aitana López -->
+        <div class="review-card reveal delay-1">
+          <span class="review-quote" aria-hidden="true">"</span>
+          <blockquote class="review-text">
+            Una experiencia única. Fui con mis amigas al taller de Cerámica y Vino
+            y nos encantó. Grace es un amor y explica todo super bien.
+            ¡Repetiremos seguro!
+          </blockquote>
+          <div class="review-footer">
+            <span class="review-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <span class="review-author">Aitana López</span>
+            <span class="review-tag">Cerámica y Vino</span>
+          </div>
+        </div>
+
+        <!-- Reseña 2 — Marisa G. -->
+        <div class="review-card reveal delay-2">
+          <span class="review-quote" aria-hidden="true">"</span>
+          <blockquote class="review-text">
+            El taller es precioso y tiene una energía increíble. He hecho el curso
+            de torno y me he sentido super relajada.
+            Un sitio de 10 en el centro de Málaga.
+          </blockquote>
+          <div class="review-footer">
+            <span class="review-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <span class="review-author">Marisa G.</span>
+            <span class="review-tag">Torno de Alfarería</span>
+          </div>
+        </div>
+
+      </div><!-- /reviews-grid -->
+
+      <!-- CTA Google Maps -->
+      <div class="reviews-cta reveal delay-3">
+        <a href="https://www.google.com/maps/search/El+Taller+de+Grace+Alfambra+7+M%C3%A1laga"
+           target="_blank" rel="noopener noreferrer" class="btn-google">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          Ver más reseñas en Google
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══ GALLERY ═══════════════════════════════════════════ -->
+  <section class="gallery" id="galeria" aria-label="Galería">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <span class="section-label">El taller en imágenes</span>
+        <h2 class="section-title text-center">Piezas &amp; momentos</h2>
+        <p class="section-subtitle text-center">Cada grieta tiene su historia. Cada pieza, su dueño.</p>
+      </div>
+
+      <div class="gallery-mosaic">
+
+        <figure class="gallery-figure gi-1 reveal">
+          <div class="gallery-frame">
+            <div class="gallery-frame-inner" aria-hidden="true">
+              <img src="./assets/taller_interior_hq.png" alt="Estudio" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="gallery-overlay">
+              <div><h3>El espacio</h3><span>Estudio · Málaga</span></div>
+            </div>
+          </div>
+          <figcaption class="gallery-label">
+            <span class="gallery-label-title">Interior del taller</span>
+            <span class="gallery-label-meta">2026 · Málaga</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure gi-2 reveal delay-1">
+          <div class="gallery-frame">
+            <div class="gallery-frame-inner" aria-hidden="true">
+              <img src="./assets/gallery_group_plates.png" alt="Platos en proceso" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="gallery-overlay">
+              <div><h3>Primeros pasos</h3><span>Platos en proceso</span></div>
+            </div>
+          </div>
+          <figcaption class="gallery-label">
+            <span class="gallery-label-title">Mesa de trabajo</span>
+            <span class="gallery-label-meta">Taller · 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure gi-3 reveal delay-2">
+          <div class="gallery-frame">
+            <div class="gallery-frame-inner" aria-hidden="true">
+              <img src="./assets/gallery_ladybug.png" alt="Maceta Mariquitas" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="gallery-overlay">
+              <div><h3>Detalles a mano</h3><span>Piezas únicas</span></div>
+            </div>
+          </div>
+          <figcaption class="gallery-label">
+            <span class="gallery-label-title">Maceta pintada</span>
+            <span class="gallery-label-meta">Alumnas · 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure gi-4 reveal delay-3">
+          <div class="gallery-frame">
+            <div class="gallery-frame-inner" aria-hidden="true">
+              <img src="./assets/gallery_cat_plate.png" alt="Plato Gato" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="gallery-overlay">
+              <div><h3>Plato Jenni</h3><span>Colección</span></div>
+            </div>
+          </div>
+          <figcaption class="gallery-label">
+            <span class="gallery-label-title">Piezas terminadas</span>
+            <span class="gallery-label-meta">Alumnas · 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure gi-5 reveal delay-4">
+          <div class="gallery-frame">
+            <div class="gallery-frame-inner" aria-hidden="true">
+              <img src="./assets/gallery_prodotti.png" alt="Torno" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="gallery-overlay">
+              <div><h3>El torno</h3><span>Técnica ancestral</span></div>
+            </div>
+          </div>
+          <figcaption class="gallery-label">
+            <span class="gallery-label-title">Torno de alfarería</span>
+            <span class="gallery-label-meta">Técnica · 2026</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ CTA RESERVA ════════════════════════════════════════ -->
+  <section class="cta-wa" id="reservar" aria-label="Reservar taller">
+
+    <!-- Sinuous curves on dark bg -->
+    <div class="curves-deco" aria-hidden="true">
+      <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-100,300 C200,80 480,520 780,300 S1280,80 1550,400"
+              fill="none" stroke="#FAF8F3" stroke-width="2" opacity="0.06"/>
+        <path d="M-80,500 C220,260 500,620 800,420 S1300,220 1560,520"
+              fill="none" stroke="#E07848" stroke-width="3" opacity="0.08"/>
+        <path d="M100,100 C380,-80 660,400 960,180 S1400,-60 1620,280"
+              fill="none" stroke="#FAF8F3" stroke-width="1.5" opacity="0.05"/>
+      </svg>
+    </div>
+
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="cta-wa-label">Plazas limitadas</span>
+      <h2 class="cta-wa-title reveal">
+        ¿Y si esta tarde<br />moldeas algo tuyo?
+      </h2>
+      <p class="cta-wa-sub reveal delay-1">
+        Solo escríbenos. En menos de 24 horas tienes tu plaza confirmada.
+      </p>
+      <div style="text-align:center;">
+        <a href="https://wa.me/34613321899?text=Hola%20Grace%2C%20quiero%20reservar%20un%20taller%20%F0%9F%8F%BA%20%C2%BFCu%C3%A1ndo%20hay%20disponibilidad%3F"
+           target="_blank" rel="noopener noreferrer" class="btn-wa-big reveal delay-2">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Reservar por WhatsApp
+        </a>
+        <div class="cta-reassure reveal delay-3">
+          <span>Respuesta en &lt; 24h</span>
+          <div class="cta-dot" aria-hidden="true"></div>
+          <span>Plazas muy limitadas</span>
+          <div class="cta-dot" aria-hidden="true"></div>
+          <span>Materiales incluidos</span>
+          <div class="cta-dot" aria-hidden="true"></div>
+          <span>Sin experiencia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ FOOTER ════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#inicio" class="footer-logo-wrap" aria-label="El Taller de Grace — inicio">
+            <img src="./assets/logo.png" alt="El Taller de Grace" class="logo-image-footer" />
+          </a>
+          <p class="footer-tagline">Cerámica artesanal en el corazón de Málaga.<br />Un lugar donde las manos hacen lo que la cabeza no puede.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Talleres</h4>
+          <ul>
+            <li><a href="#talleres">Cerámica y Vino</a></li>
+            <li><a href="#talleres">Torno de Alfarería</a></li>
+            <li><a href="#abril">Pinta tu taza</a></li>
+            <li><a href="https://wa.me/34613321899?text=Hola%20Grace%2C%20quiero%20organizar%20un%20evento%20privado" target="_blank" rel="noopener noreferrer">Eventos privados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/34613321899" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="https://instagram.com/eltallerdegrace" target="_blank" rel="noopener noreferrer">@eltallerdegrace</a></li>
+            <li><a href="#nosotras">Nuestra historia</a></li>
+            <li><a href="#galeria">Galería</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 El Taller de Grace · Alfambra 7, Málaga · Hecho con barro y cariño</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/eltallerdegrace" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61570209707940&amp;sk" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/34613321899" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-legal-block">
+        <p class="footer-legal">Este sitio es una propuesta de diseño privada para El Taller de Grace. Todos los derechos de imagen pertenecen a la marca. No apto para uso público ni comercial sin autorización.</p>
+        <p class="footer-img-note">Nota: Las imágenes utilizadas en esta versión del sitio son exclusivamente para fines demostrativos y de presentación de la propuesta de diseño. Una vez aprobado el proyecto, se sustituirán por imágenes propiedad del cliente o libres de derechos para cumplir con la normativa de propiedad intelectual.</p>
+        <p class="footer-credit">Diseño &amp; Desarrollo Web · <strong>Giorgia Gelmini</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
